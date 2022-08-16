@@ -2,6 +2,10 @@
 <link rel="stylesheet" href="{{ 'taprm-base.css' | asset_url }}">
 <link rel="stylesheet" href="{{ 'that-can-like.css' | asset_url }}">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;800&display=swap" rel="stylesheet">
+
 <div class="that-can-like">
 	<div class=that-can-like__container">
 		<h3 class="that-can-like__title">{{ section.settings.title-section }}</h3>
@@ -9,15 +13,23 @@
 			{% for product in section.settings.collection-exclusive.products %}
 				{% if product.tags contains "exclusive" %}
 					<div class="product-card">
-						<div class="product-card__stickers"></div>
+						<div class="product-card__stickers">
+							<div class="product-card__stickers__parallelogram">Exclusive</div>
+							<div class="product-card__stickers__eye">{% render 'icon-eye' %}</div>
+						</div>
 						<div class="product-card__image">
-							<img src="" alt="">
+							<img src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.title }}">
 						</div>
 						<div class="product-card__name-product">{{ product.title }}</div>
 						<div class="product-card__name-product">{{ product.vendor }}</div>
-						<selection>
-							<option value=""></option>
-						</selection>
+						<form action="" method="get">
+							<select name="select"> <!--Supplement an id here instead of using 'name'-->
+								<option value="1" selected>1 Bottle - {{ product.price | money }}</option>
+								<option value="2" >2 Bottle - {{ product.price | times: 2 | money}}</option>
+								<option value="3">3 Bottle - {{ product.price  | times: 3 | money}}</option>
+							</select>
+							<button type="submit">ADD TO CART</button>
+						</form>
 					</div>
 				{% endif %}
 			{% endfor %}
@@ -25,6 +37,8 @@
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript" src="{{ 'that-can-like.js' | asset_url}}"></script>
 
 {% schema %}
 {
