@@ -21,8 +21,8 @@
 							<img src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.title }}">
 						</div>
 						<div class="product-card__name-product">{{ product.title }}</div>
-						<div class="product-card__name-product">{{ product.vendor }}</div>
-						<form action="" method="get">
+						<div class="product-card__vendor-product">{{ product.vendor }}</div>
+						<form class="form-one" action="" method="get">
 							<select name="select"> <!--Supplement an id here instead of using 'name'-->
 								<option value="1" selected>1 Bottle - {{ product.price | money }}</option>
 								<option value="2" >2 Bottle - {{ product.price | times: 2 | money}}</option>
