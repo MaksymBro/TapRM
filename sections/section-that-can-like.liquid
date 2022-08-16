@@ -1,0 +1,50 @@
+
+<link rel="stylesheet" href="{{ 'taprm-base.css' | asset_url }}">
+<link rel="stylesheet" href="{{ 'that-can-like.css' | asset_url }}">
+
+<div class="that-can-like">
+	<div class=that-can-like__container">
+		<h3 class="that-can-like__title">{{ section.settings.title-section }}</h3>
+		<div class="wrapper-products">
+			{% for product in section.settings.collection-exclusive.products %}
+				{% if product.tags contains "exclusive" %}
+					<div class="product-card">
+						<div class="product-card__stickers"></div>
+						<div class="product-card__image">
+							<img src="" alt="">
+						</div>
+						<div class="product-card__name-product">{{ product.title }}</div>
+						<div class="product-card__name-product">{{ product.vendor }}</div>
+						<selection>
+							<option value=""></option>
+						</selection>
+					</div>
+				{% endif %}
+			{% endfor %}
+			
+		</div>
+	</div>
+</div>
+
+{% schema %}
+{
+"name": "That can like",
+"class": "section-body",
+"settings": [
+	{
+		"type": "text",
+		"id": "title-section",
+		"label": "Label section:"
+	},{
+		"type": "collection",
+		"id": "collection-exclusive",
+		"label": "What you like:"
+	}
+],
+"presets": [
+	{
+		"name": "That can like"
+	}
+]
+}
+{% endschema %}
