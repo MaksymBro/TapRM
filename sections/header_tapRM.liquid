@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="{{ 'header_taprm.css' | asset_url }}">
+
+<link rel="stylesheet" href="{{ 'taprm-base.css' | asset_url }}">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+
+
+	<header class="header">
+		<div class="header__container">
+			<a href="/" class="header__logo"><img src="{{ section.settings.logo_header | img_url: 'master'  }}" alt="logo store"></a>
+			<nav class="header__menus menu">
+				<ul class="menu__list">
+					<li class="menu__item">
+						<a href="#" class="menu__link">Beers {% render 'icon-shevron-down' %}</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">Breweries {% render 'icon-shevron-down' %}</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">Gifts & Variety Packs {% render 'icon-shevron-down' %}</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">Learn More {% render 'icon-shevron-down' %}</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="header__action">
+				<div class="action__wrapper">
+					<a href="#" class="search icon__action">{% render 'icon-search-RM' %}</a>
+					<a href="#" class="user icon__action">{% render 'icon-user-RM' %}</a>
+					<a href="#" class="cart icon__action">{% render 'icon-cart-RM' %}</a>
+					<div class="burger-icon">
+						<div class="line-burger"> </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+
+<script>
+
+</script>
+
+<script type="text/javascript" src="{{ 'header-taprm.js' | asset_url}}"></script>
+
+{% schema %}
+{
+"name": "t:sections.header.name",
+"class": "section-header",
+"settings": [
+	{
+		"type": "image_picker",
+		"id": "logo_header",
+		"label": "Logo header:"
+	}
+]
+}
+{% endschema %}

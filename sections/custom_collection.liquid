@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="{{ 'taprm-base.css' | asset_url }}">
+<link rel="stylesheet" href="{{ 'custom-collection.css' | asset_url }}">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+
+<div class="any-collection-wrapper">
+	<div class="any-collection__container">
+		<div class="any-collection">
+			<div class="grid-items">
+				{% for item in section.settings.collection %}
+					<div class="cart-item">
+						<h2 class="name-item">{{ item.title }}</h2>
+						<img src="{{ item.featured_image | img_url: 'master' }}" alt="picture-{{ item.title }}" class="img-item-main">
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% schema %}
+{
+"name": "Custom collection",
+"class": "Custom collection",
+"settings": [
+{
+"type": "collection",
+"id": "collection",
+"label": "Collection:"
+}
+
+],
+"presets": [
+{
+"name": "Custom collection"
+}
+]
+}
+{% endschema %}

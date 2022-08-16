@@ -1,0 +1,29 @@
+{
+  "sections": {
+    "16583166030cc9867c": {
+      "type": "advert-taprm",
+      "settings": {
+        "image-banner": "shopify:\/\/shop_images\/Backdrop_Image_1.png",
+        "image-label": "shopify:\/\/shop_images\/Moody_Tongue_Smoked_Meats_Logo_1.png",
+        "title-one": "Interested in the ultimate beer-pairing experience this holiday season?",
+        "paragraph-one": "<p>Enjoy Chicago's newest beer and food experience from acclaimed culinary brewery Moody Tongue. Nine-time Michelin Star Recipient Executive Chef Jared Wentworth and Brewmaster Jared Rouben have curated a selection of holiday packages from their newest concept: Moody Tongue Smoked Meats.  <\/p>",
+        "paragraph-two": "<p>Moody Tongue Smoked Meats showcase quality ingredients, highlighting farm-to-table meats and support a number of local Midwestern farmers and producers.  <\/p>",
+        "title-two": "Receiving Your Order",
+        "paragraph-next-one": "<p><strong>Shipping is offered both via overnight and 2-day delivery options<\/strong> to ensure your package is fresh.<\/p>",
+        "paragraph-next-two": "<p><strong>Smoked meats and beer shipped separately.<\/strong> If you would like to ensure your shipment arrives by a particular date, please email contact@moodytongue.com <\/p>",
+        "image-card": "shopify:\/\/shop_images\/JW_s_Slow_Smoked_Barbecue_Chicken_8.png",
+        "paragraph-card": "<p>All bundles include smokey meats, Carolina Gold Sauce, Kansas City Sauce, a Moody Tongue Bottle Opener, and a special beer to accompany the taste!<\/p>"
+      }
+    },
+    "16588350095eac8c63": {
+      "type": "custom_collection",
+      "settings": {
+        "collection": "my-collection"
+      }
+    }
+  },
+  "order": [
+    "16583166030cc9867c",
+    "16588350095eac8c63"
+  ]
+}

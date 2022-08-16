@@ -1,0 +1,121 @@
+
+
+<link rel="stylesheet" href="{{ 'taprm-base.css' | asset_url }}">
+<link rel="stylesheet" href="{{ 'advertt-taprm.css' | asset_url }}">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+
+
+	<div class="main-advertt">
+		<div class="advertt-banner__bg-black">
+			<div class="advertt-banner__container">
+				<div class="advertt__images">
+					<div class="image-banner">
+						<img src="{{ section.settings.image-banner | img_url: 'master' }}" alt="main image" class="">
+					</div>
+					<div class="image-label-banner">
+						<img src="{{ section.settings.image-label | img_url: 'master' }}" alt="label image" class="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="advertt__container">
+			<div class="advertt__content">
+				<h3 class="content__title-one">{{ section.settings.title-one }}</h3><br>
+				<div class="content__text-one">
+					{{ section.settings.paragraph-one }}<br>
+					{{ section.settings.paragraph-two }}<br>
+				</div>
+				<div class="content__title-two">
+					<div class="text-two__line-left"> </div>
+						<h3>{{ section.settings.title-two }}</h3>
+					<div class="text-two__line-right"> </div>
+				</div><br>
+				<div class="content__text-two">
+					{{ section.settings.paragraph-next-one }}<br>
+					{{ section.settings.paragraph-next-two }}
+				</div>
+			</div>
+		</div>
+		<div class="advertt-card__wrapper">
+			<div class="advertt-card__container">
+				<div class="circle-item"> </div>
+				<div class="advertt__card">
+					<div class="card__image"><img src="{{ section.settings.image-card | img_url: 'master' }}" alt="Meat warm" class="image-main"></div>
+					<div class="card__text">{{ section.settings.paragraph-card }}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<script type="text/javascript" src="{{ 'advert-taprm.js' | asset_url}}"></script>
+
+{% schema %}
+{
+"name": "Avert sectionds",
+"class": "avert-sectionsd",
+"settings": [
+{
+	"type": "image_picker",
+	"id": "image-banner",
+	"label": "Picture of banner:"
+},
+{
+	"type": "image_picker",
+	"id": "image-label",
+	"label": "Picture label:"
+},
+{
+	"type": "text",
+	"id": "title-one",
+	"label": "Title first:",
+	"default": "Interested in the ultimate beer-pairing experience this holiday season?"
+},
+{
+	"type": "richtext",
+	"id": "paragraph-one",
+	"label": "Paragraph one:"
+},
+{
+	"type": "richtext",
+	"id": "paragraph-two",
+	"label": "Paragraph two:"
+},
+{
+	"type": "text",
+	"id": "title-two",
+	"label": "Title second:",
+	"default": "Receiving Your Order"
+},
+{
+	"type": "richtext",
+	"id": "paragraph-next-one",
+	"label": "Paragraph one next:"
+},
+{
+	"type": "richtext",
+	"id": "paragraph-next-two",
+	"label": "Paragraph next two:"
+},
+{
+	"type": "image_picker",
+	"id": "image-card",
+	"label": "Picture of card:"
+},
+{
+	"type": "richtext",
+	"id": "paragraph-card",
+	"label": "Paragraph of card:"
+}
+
+],
+"presets": [
+	{
+		"name": "AdvertTapRM"
+	}
+]
+}
+{% endschema %}
