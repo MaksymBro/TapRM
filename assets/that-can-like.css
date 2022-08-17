@@ -26,12 +26,12 @@
     flex-wrap: wrap;
     justify-content: space-around;
     column-gap: 34px;
-    row-gap: 24px;
     margin: 20px auto 20px;
 }
 .product-card{
     width: 270px;
     height: 500px;
+    margin-bottom: 24px;
 }
 .product-card__stickers{
     display: flex;
